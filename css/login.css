@@ -1,0 +1,328 @@
+/* PALETA REDLINE */
+:root{
+  --redline-black: #030303;
+  --redline-dark: #0a0a0f;
+  --redline-white: #ffffff;
+  --redline-soft: rgba(255,255,255,0.75);
+
+  --redline-pink: #ff006e;
+  --redline-red: #ff143c;
+  --redline-orange: #ff7a00;
+
+  --glass-bg: rgba(255,255,255,0.08);
+  --glass-border: rgba(255,255,255,0.12);
+
+  --redline-gradient: linear-gradient(
+    90deg,
+    #ff006e,
+    #ff143c,
+    #ff7a00
+  );
+}
+
+/* RESET */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body{
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    url("../img/login.jpg")
+    center center / cover no-repeat;
+  overflow: hidden;
+  position: relative;
+}
+
+/* OVERLAY */
+.overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(3,3,3,0.84);
+  backdrop-filter: blur(3px);
+}
+
+/* CONTENEDOR */
+.login-wrapper{
+  width: 100%;
+  max-width: 430px;
+  position: relative;
+  z-index: 10;
+  padding: 15px 25px;
+  text-align: center;
+  transform: scale(0.92);
+  margin-top: -35px;
+}
+
+/* BOTÓN ATRÁS */
+.back-button{
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  color: white !important;
+  text-decoration: none !important;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+.back-button:hover{
+  background: rgba(255,255,255,0.15);
+  transform: translateY(-2px);
+}
+
+/* LOGO */
+.logo{
+  width: 340px;
+  margin-bottom: -25px;
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* TÍTULO */
+h1{
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+/* LOGIN SOCIAL */
+.social-login{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+
+.social-login button{
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 10px;
+  background: var(--glass-bg);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.social-login button:hover{
+  transform: translateY(-4px);
+  background: var(--redline-gradient);
+  box-shadow: 0 0 20px rgba(255,20,60,0.35);
+}
+
+/* DIVISOR */
+.divider{
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.divider::before,
+.divider::after{
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+}
+
+.divider span{
+  color: rgba(255,255,255,0.55);
+  margin: 0 15px;
+}
+
+/* FORM */
+form{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* LABELS */
+label{
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  margin-top: 12px;
+}
+
+/* INPUTS */
+form input{
+  width: 100%;
+  height: 54px;
+  border-radius: 8px;
+  border: 2px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.05);
+  color: white;
+  padding: 0 20px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+input:focus{
+  border-color: var(--redline-orange);
+  box-shadow: 0 0 20px rgba(255,122,0,0.35);
+}
+
+input::placeholder{
+  color: rgba(255,255,255,0.45);
+}
+
+/* CHECK */
+.remember{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  color: var(--redline-soft);
+  font-size: 14px;
+}
+
+/* CHECKBOX */
+.remember input[type="checkbox"]{
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px;
+  min-height: 18px;
+  max-width: 18px;
+  max-height: 18px;
+  padding: 0 !important;
+  margin: 0;
+  flex: none;
+  display: inline-block;
+  border-radius: 4px;
+  border: 2px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.05);
+  cursor: pointer;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.remember input:hover{
+  border-color: var(--redline-orange);
+}
+
+.remember input:checked{
+  background: var(--redline-gradient);
+  border-color: var(--redline-orange);
+  box-shadow: 0 0 12px rgba(255,122,0,0.45);
+}
+
+.remember input:checked::before{
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* BOTÓN LOGIN */
+.login-btn{
+  margin-top: 25px;
+  height: 54px;
+  border: none;
+  border-radius: 8px;
+  background: var(--redline-gradient);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-btn:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(255,20,60,0.45);
+}
+
+/* LINKS */
+.links{
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.links a{
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.links a:hover{
+  color: var(--redline-orange);
+}
+
+/* BOTÓN CREAR CUENTA */
+.register-btn{
+  width: 100%;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: white !important;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  margin-top: 5px;
+}
+
+.register-btn:hover{
+  background: rgba(255,255,255,0.15);
+  transform: translateY(-2px);
+  border-color: rgba(255,122,0,0.35);
+}
+
+/* LINK RECUPERAR */
+.forgot-link{
+  color: rgba(255,255,255,0.75) !important;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 8px;
+  transition: 0.3s ease;
+}
+
+.forgot-link:hover{
+  color: var(--redline-orange) !important;
+}

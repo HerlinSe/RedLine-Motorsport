@@ -1,0 +1,99 @@
+/* REGISTER LAYOUT */
+.register-layout{
+  position: relative;
+  max-width: 430px;
+  transform: scale(0.82);
+  margin-top: -95px;
+}
+
+/* BOTÓN ATRÁS */
+.register-layout .back-button{
+  position: absolute;
+  top: -55px;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  color: white !important;
+  text-decoration: none !important;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+/* HOVER BOTÓN ATRÁS */
+.register-layout .back-button:hover{
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,122,0,0.35);
+  transform: translateY(-2px);
+}
+
+/* TEXTO DESCRIPTIVO */
+.register-description{
+  color: rgba(255,255,255,0.72);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 5px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+/* ICONOS SOCIALES EN REGISTRO */
+.register-social{
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+/* TEXTO DE YA TIENES CUENTA */
+.login-text{
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  margin-top: -5px;
+}
+
+/* LINK INICIAR SESIÓN */
+.login-text a{
+  margin-left: 5px;
+  color: rgba(255,255,255,0.75) !important;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+/* HOVER LINK */
+.login-text a:hover{
+  color: var(--redline-orange) !important;
+}
+
+/* TÍTULO REGISTRO */
+
+.register-layout h1{
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+/* INPUTS MÁS COMPACTOS */
+.register-layout form input{
+  height: 48px;
+  font-size: 14px;
+}
+
+/* LABELS */
+.register-layout label{
+  margin-top: 10px;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+/* BOTÓN CREAR CUENTA */
+.register-layout .login-btn{
+  height: 50px;
+  margin-top: 18px;
+}

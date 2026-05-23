@@ -1,0 +1,63 @@
+/* RECOVERY LAYOUT */
+.recovery-layout{
+  position: relative;
+}
+
+/* BOTÓN ATRÁS */
+.recovery-layout .back-button{
+  position: absolute;
+  top: -55px;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  color: white !important;
+  text-decoration: none !important;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+/* HOVER BOTÓN ATRÁS */
+.recovery-layout .back-button:hover{
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,122,0,0.35);
+  transform: translateY(-2px);
+}
+
+/* TEXTO DESCRIPTIVO */
+.recovery-description{
+  color: rgba(255,255,255,0.72);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: -5px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* LINKS */
+.links{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* LINK INFERIOR */
+.recovery-layout .forgot-link{
+  color: rgba(255,255,255,0.75) !important;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+/* HOVER LINK INFERIOR */
+.recovery-layout .forgot-link:hover{
+  color: var(--redline-orange) !important;
+}
