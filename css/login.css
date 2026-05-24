@@ -36,7 +36,7 @@ body{
   justify-content: center;
   align-items: center;
   background:
-    url("../img/login.jpg")
+    url("../img/login.png")
     center center / cover no-repeat;
   overflow: hidden;
   position: relative;
